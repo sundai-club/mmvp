@@ -209,7 +209,7 @@
     "onboarding": {
       "questions": [
         "What is your name?",
-        "Which company are you part of?",
+        "Which is your company name?",
         "Which teams are you part of?",
         "What are your roles?",
         "What is today's date?"
