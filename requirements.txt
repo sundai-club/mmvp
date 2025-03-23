@@ -1,0 +1,7 @@
+django==5.1.7
+djangorestframework==3.15.2
+python-dotenv==1.0.1
+requests==2.32.3
+pytest==8.3.5
+pytest-django==4.10.0
+ai21==3.1.0 

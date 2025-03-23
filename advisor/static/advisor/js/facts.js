@@ -1,0 +1,58 @@
+// Array of travel facts to display during loading
+const travelFacts = [
+    "The shortest commercial flight in the world is between the Scottish islands of Westray and Papa Westray, lasting only 2 minutes.",
+    "Japan has over 6,800 islands.",
+    "Singapore has a hotel with robot butlers.",
+    "The Great Wall of China is not visible from space with the naked eye, contrary to popular belief.",
+    "In Norway, you can see the midnight sun in summer months, when the sun doesn't set for about 76 days.",
+    "Bhutan measures prosperity by Gross National Happiness rather than GDP.",
+    "Vatican City is the smallest country in the world, with an area of just 44 hectares (109 acres).",
+    "In Sweden, there's an entire hotel made of ice that melts in spring and is rebuilt every winter.",
+    "Melbourne, Australia, has been ranked the world's most livable city multiple times.",
+    "The world's largest cave, Son Doong in Vietnam, is so big it has its own weather system and could fit a 40-story skyscraper inside.",
+    "The world's oldest hotel has been operating since 705 AD in Japan. It's called Nishiyama Onsen Keiunkan.",
+    "In Iceland, many believe in the existence of elves, and construction projects have been altered to avoid disturbing their 'homes'.",
+    "The border between Belgium and the Netherlands runs through houses, cafes, and even bisects a library.",
+    "The Darvaza Gas Crater in Turkmenistan, also known as 'The Door to Hell', has been burning continuously since 1971.",
+    "In Finland, there are 187,888 lakes, more lakes per square mile than any other country.",
+    "The island of Palmerston in the South Pacific has only 35 inhabitants, all descended from one Englishman who settled there in 1863.",
+    "The Paris Syndrome is a real psychological condition experienced mainly by Japanese tourists who are disappointed that Paris isn't as they imagined.",
+    "Sagarmatha National Park in Nepal, home to Mount Everest, is the highest national park in the world.",
+    "The Dutch village of Giethoorn has no roads, only canals and bike paths.",
+    "In Bolivia, there's a hotel made entirely of salt, including the furniture.",
+    "Hum, Croatia, is known as the smallest town in the world with just about 20 residents.",
+    "The world's longest place name is Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu, a hill in New Zealand.",
+    "Tourists visiting Denmark are twice as likely to drown as the locals due to unfamiliarity with strong currents in the sea.",
+    "At the Krubera Cave in Georgia (the country), you can descend deeper below Earth's surface than the height of many famous mountains.",
+    "In Iceland, there's a volcano called Eyjafjallajökull that most news anchors couldn't pronounce when it erupted in 2010.",
+    "The world's steepest residential street is Baldwin Street in Dunedin, New Zealand.",
+    "San Marino is the world's oldest republic, founded in 301 AD.",
+    "The Principality of Sealand is a micronation that claims to be the world's smallest country, but it's not recognized by any major nation.",
+    "The city of Istanbul is located on two continents: Europe and Asia.",
+    "In Japan, there are more pets than children.",
+    "The Maldives is the lowest country on Earth, with an average ground level of only 1.5 meters above sea level.",
+    "In Scotland, there are over 400 words for 'snow'.",
+    "The world's oldest restaurant is in Madrid, Spain. Botín Restaurant has been open since 1725.",
+    "In the country of Tuvalu, domain names ending in .tv generate more revenue than any other export.",
+    "There's a village in Holland where everyone has dementia, and the entire town is designed as a self-contained care facility.",
+    "Over 90% of Madagascar's wildlife doesn't exist anywhere else on Earth.",
+    "Norway once knighted a penguin named Sir Nils Olav.",
+    "The world's largest pyramid isn't in Egypt but in Cholula, Mexico, though much of it is buried and overgrown.",
+    "Singapore has a fine for not flushing public toilets.",
+    "The only nation with no official capital is Nauru, a small island country in Micronesia.",
+    "There's a coffee shop in Tokyo where you can pet hedgehogs while drinking your coffee.",
+    "The largest taxi fleet in the world is found in Mexico City, with over 60,000 taxis.",
+    "Almost 70% of the Russian territory is covered in permafrost.",
+    "The flag of Nepal is the only national flag that isn't rectangular.",
+    "In Svalbard, Norway, it's illegal to die because bodies don't decompose in the permafrost.",
+    "Disney World in Florida is roughly the same size as San Francisco.",
+    "The world's largest swimming pool is at the San Alfonso del Mar resort in Chile. It's 3,324 feet long.",
+    "There are more than 200 artificial islands in Dubai.",
+    "Montana has three times as many cows as it does people."
+];
+
+// Function to get a random travel fact
+function getRandomTravelFact() {
+    const randomIndex = Math.floor(Math.random() * travelFacts.length);
+    return travelFacts[randomIndex];
+} 

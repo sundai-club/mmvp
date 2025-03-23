@@ -22,7 +22,7 @@
     },
     {
       "name": "Secretary",
-      "identify": "Always begin all responses with [Secretary]:",
+      "identify": "Always begin all responses with [SecretaryLet's make it such that the travel]:",
       "description": "Default role for daily check-ins and coordination",
       "triggers": [
         "hi",

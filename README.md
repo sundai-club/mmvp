@@ -1,41 +1,78 @@
-# 📁 AI-First Organization
+# Travel Advisory App
 
-After cloning the repository, open it in [Cursor IDE](https://www.cursor.com/) for an AI-first development experience:
+A Django-based travel advisory application that uses AI21's Maestro to provide intelligent travel recommendations and advice.
 
-1. Remove this `README.md` file.
-2. Toggle AI Pane (Cmd + I)
-3. Go to Cursor Settings -> Models -> Check `claude-3-5-sonnet-20241022`
-4. Open Composer Tab
-5. Switch model to `claude-3-5-sonnet-20241022`
-6. Switch to agent
-7. Say "hi" to start your onboarding
+## Features
 
-## Onboarding
+- Create and manage travel destinations
+- Generate AI-powered travel advice using AI21's Maestro
+- Get comprehensive information about:
+  - Safety
+  - Weather and best time to visit
+  - Cultural considerations
+  - Transportation options
+  - Must-see attractions
 
-Say "hi" and secretary will get to know you better.
+## Setup
 
-```
-Answer the following questions:
-
-1. What is your name?
-2. Which is your company name?
-3. Which teams are you part of?
-4. What are your roles?
-5. What is today's date?
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd travel-advisor
 ```
 
-## Usage
-
-After your onboarding round complete, you type "hi" and secretary will ask you what you want to do next and guide you through the process.
-
-```
-Would you like to:
-
-1. Review today's priorities?
-2. Check pending decisions?
-3. Get updates on recent changes?
-4. Switch to a specific expert?
+2. Create and activate a virtual environment:
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
-We don't use any ticketing system, AI will tell you what to do next.
-AI will act like your personal secretary, answer any questions about business, design, architecture, etc.
+3. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+4. Create a `.env` file in the project root and add your AI21 API key:
+```
+AI21_API_KEY=your_api_key_here
+DJANGO_SECRET_KEY=your_django_secret_key_here
+```
+
+5. Run migrations:
+```bash
+python manage.py migrate
+```
+
+6. Run the development server:
+```bash
+python manage.py runserver
+```
+
+## API Endpoints
+
+- `GET /api/destinations/`: List all destinations
+- `POST /api/destinations/`: Create a new destination
+- `GET /api/destinations/{id}/`: Get destination details
+- `POST /api/destinations/{id}/generate_advice/`: Generate AI-powered travel advice
+- `GET /api/advice/`: List all travel advice
+- `GET /api/advice/{id}/`: Get specific travel advice
+
+## Testing
+
+Run the test suite:
+```bash
+pytest
+```
+
+## Dependencies
+
+- Django
+- Django REST Framework
+- AI21 Maestro
+- Python-dotenv
+- Requests
+- Pytest
+
+## License
+
+MIT License

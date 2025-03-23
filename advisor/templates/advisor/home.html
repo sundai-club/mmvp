@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Advisor - Off the Beaten Path</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'advisor/css/styles.css' %}">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar for Search History -->
+        <div class="sidebar" id="sidebar">
+            <h2 class="sidebar-title">Your Travel History</h2>
+            <ul class="history-list" id="history-list">
+                <!-- Search history will be dynamically inserted here -->
+                <li class="history-item empty-history">Your searched destinations will appear here</li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content" id="main-content">
+            <button class="sidebar-toggle" id="sidebar-toggle">&#9776;</button>
+
+            <header>
+                <div class="container">
+                    <h1>Travel Advisor: Off the Beaten Path</h1>
+                    <p class="tagline">Discover hidden gems and local insights around the world</p>
+                </div>
+            </header>
+
+            <main class="container">
+                <div class="guide-info">
+                    <p>Discover hidden gems and local insights for destinations around the world. This tool uses AI to search for travel information about any location, with a focus on less common experiences. Perfect for finding off-the-beaten-path adventures tailored to your interests!</p>
+                </div>
+
+                <div class="search-container">
+                    <form id="search-form" class="search-form">
+                        <div class="form-group">
+                            <label for="city-input">City</label>
+                            <input type="text" id="city-input" placeholder="Enter city name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="country-input">Country</label>
+                            <input type="text" id="country-input" placeholder="Enter country" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="hobby-input">Your Interests (Optional)</label>
+                            <textarea id="hobby-input" placeholder="What are you interested in? (e.g., hiking, photography, food, history)" rows="3"></textarea>
+                        </div>
+                        <button type="submit">Get Travel Advice</button>
+                    </form>
+                </div>
+
+                <div class="error-message" id="error-message" style="display: none;"></div>
+
+                <div class="loading" id="loading" style="display: none;">
+                    <h3 class="loading-title">Exploring travel insights...</h3>
+                    <div class="spinner"></div>
+                    <div class="travel-fact" id="travel-fact">
+                        <!-- Random travel facts will be inserted here -->
+                    </div>
+                </div>
+
+                <div class="results-container" id="results-container" style="display: none;">
+                    <!-- Results will be dynamically inserted here -->
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="{% static 'advisor/js/facts.js' %}"></script>
+    <script src="{% static 'advisor/js/main.js' %}"></script>
+</body>
+</html> 
