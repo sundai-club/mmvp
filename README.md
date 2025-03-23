@@ -1,4 +1,4 @@
-# Travel Advisory App
+# Travel Advisory App - MMVP (Massively Multiplayer Vibe Programming)
 
 A Django-based travel advisory application that uses AI21's Maestro to provide intelligent travel recommendations and advice.
 
